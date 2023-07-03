@@ -273,18 +273,18 @@ section.notices-section div.cards-notices{
 
 section.notices-section div.cards-notices div.card-notice{
     border-bottom: 2px solid var(--font-color-gray) ;
-    width: 400px;
-    height: 700px;/* 
+    max-width: 400px;
+    max-height: 700px;/* 
     display: grid;
     grid-template-rows: 50% 15% 25% 10%; */
     margin: 30px;
 }
 
-section.notices-section div.cards-notices div.card-notice div.card-notice-img{  
+/* section.notices-section div.cards-notices div.card-notice div.card-notice-img{  
     background-image: url(images/notebook.png);
     background-size: cover;
     background-position: center center;
-}
+} */
 
 section.notices-section div.cards-notices div.card-notice div.card-notice-img img{
     width: 100%;
@@ -553,15 +553,23 @@ div.ass p {
     }
     
     section.middle div.contactMiddle p , a{
-        font-size: 1.2em;
+        font-size: 1em;
     }
     
     section.middle div.contactMiddle a {
-        font-size: 1em;
+        font-size: .9em;
     }
 
     div#bHead{
         height: 30px;
+    }
+
+    section.contact p.number{
+        font-size: 10vw;
+    }
+
+    section.contact p.adress{
+        font-size: 5vw;
     }
 }
 
@@ -577,5 +585,13 @@ div.ass p {
         position: relative;
         top: -30px;
         left: 0;
+    }
+
+    div.solutions div.solutions-cards div{
+        width: 80%;
+        display: grid;
+        grid-template-rows: 30% 15% 25%;
+        margin: auto;
+        height: 700px;
     }
 }
