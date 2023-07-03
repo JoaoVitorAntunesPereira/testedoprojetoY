@@ -92,7 +92,7 @@ div.homeText{
 
 div.homeText h1{
     color: var(--color-logo);
-    font-size: 5em;
+    font-size: 5vw;
     margin-bottom: -.5em;
     font-weight: 900;
 }
@@ -436,6 +436,7 @@ div.ass p {
         width: 90vw;
         margin: 0 auto;
     }
+    
 }
 
 @media (max-width: 850px){  /* Header-breaK */
@@ -482,10 +483,11 @@ div.ass p {
         height: 700px;
     }
 
+
     section.notices-section div.cards-notices{
 /*         display: flex;
         justify-content: space-around; */
-        width: 90vw;
+        width: 80vw;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         margin: 0 auto;
@@ -493,12 +495,15 @@ div.ass p {
 
     section.notices-section {
         height: 100%;
+        width: 80vw;
+        margin: 0 auto;
       }
       
     section.middle div.contactMiddle{
         background-image: linear-gradient(to right ,var(--font-color-blue) 60%, var(--color-logo));
         height: 10vh;
     }
+    
     
 }
 
@@ -520,6 +525,26 @@ div.ass p {
         position: relative;
         bottom: 100px;
     }
+
+    section.contact div.whats{
+        position: absolute;
+        right: 8%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #2ab33f;
+        text-align: center;
+    }
+    
+    section.contact div.whats i{
+        font-size: 30px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--color-font-bg);
+    }
+
 }
 
 @media (max-width: 500px){
@@ -533,5 +558,24 @@ div.ass p {
     
     section.middle div.contactMiddle a {
         font-size: 1em;
+    }
+
+    div#bHead{
+        height: 30px;
+    }
+}
+
+@media (max-width: 600px){
+    
+    section.notices-section h2::after{
+        content: '';
+        display: inline-block;
+        height: 3px;
+        width: 200px;
+        background:linear-gradient(180deg,#84d2e2 20%, var(--font-color-blue-2) 20%);
+        background:-webkit-linear-gradient(180deg,#84d2e2 20%,var(--font-color-blue-2) 20%);
+        position: relative;
+        top: -30px;
+        left: 0;
     }
 }
