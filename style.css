@@ -490,6 +490,7 @@ footer div.contact div.contactInfo div div.adress{
 
 footer div.contact div.forms form{
     display: grid;
+    grid-template-columns: 50% 50%;
     grid-template-areas: "nome email"
                          "telefone empresa"
                          "menssagem menssagem";
@@ -616,8 +617,7 @@ footer div.contact div.items div{
     }
     div.solutions div.solutions-cards{
         display: grid;
-        grid-template-rows: 25% 15% 60%;
-        width: 100%;
+        grid-template-rows: 1fr 1fr 1fr;
     }
     section.middle div.mid h2 {
         color: var(--color-logo);
@@ -654,7 +654,7 @@ footer div.contact div.items div{
     div.solutions div.solutions-cards div{
         width: 80%;
         display: grid;
-        grid-template-rows: 22% 16% 70%;
+        grid-template-rows: 10% 16% 70%;
         margin: auto;
         height: 500px;
     }
@@ -680,15 +680,15 @@ footer div.contact div.items div{
     }
 
     footer div.contact div.contactInfo{
-        height: 40%;
+        height: 50%;
     }
 
     footer div.contact div.forms{
-        height: 40%;
+        height: 50%;
     }
     
     footer div.contact div.items{
-        height: 10%;
+        display: none;
     }
 
     ooter div.contact div.contactInfo div.p p, div.telefone p{
@@ -758,7 +758,6 @@ footer div.contact div.items div{
         transform: translateY(-50%);
         color: var(--color-font-bg);
     }
-
 }
 
 @media (max-width: 500px){
@@ -797,10 +796,15 @@ footer div.contact div.items div{
     div.solutions div.solutions-cards div{
         width: 80%;
         display: grid;
-        grid-template-rows: 30% 15% 25%;
+        grid-template-rows: 20% 20% 60%;
         margin: auto;
-        height: 700px;
+        height: 600px;
+        margin-bottom: 10px;
     }
+    div.solutions div.solutions-cards div p{
+        margin-bottom: 0;
+    }
+
 
     div.all-footer div.items {
         margin-top: 0px;
