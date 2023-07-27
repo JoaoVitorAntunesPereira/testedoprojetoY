@@ -115,7 +115,8 @@ div.solutions h2{
     font-size: 4em;
     text-align: center;
     color: var(--font-color-blue);
-    margin-bottom: 0px;
+    margin-top: 5%;
+    margin-bottom: 0;
 }
 
 div.solutions p{
@@ -130,6 +131,7 @@ div.solutions div.solutions-cards{
     display: flex;
     width: 70%;
     margin: auto;
+    margin-bottom: 7%;
 }
 
 div.solutions div.solutions-cards div{
@@ -137,7 +139,6 @@ div.solutions div.solutions-cards div{
     width: 25%;
     display: grid;
     grid-template-rows: 16% 18% 60%;
-    height: 700px;
     margin: auto;
     justify-content: space-between;
 }
@@ -160,12 +161,8 @@ div.solutions div.solutions-cards div p{
     font-size: 1.18em;
     font-weight: lighter;
     width: 100%;
+    margin-bottom: 0;
 }
-
-/* div.solutions div.solutions-cards div:nth-child(2) p{
-    width: 90%;
-} */
-
 
 section.middle{
     color: var(--color-font-bg);
@@ -177,12 +174,14 @@ section.middle div.mid {
     background-size: cover;
     background-position: center center;
     height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 section.middle div.mid div{
     position: relative;
     width: 80%;
-    top: 100px;
     margin-left: 15%;
 }
 
@@ -190,9 +189,11 @@ section.middle div.mid h2 {
     color: var(--color-logo);
     font-size: 4.3em;
     line-height: .95em;
+    margin-bottom: 0;
 }
 
 section.middle div.mid p {
+    margin-top: 10px;
     color: var(--color-font-bg);
     font-size: 1.8em;
     font-weight: 400;
@@ -232,7 +233,7 @@ section.middle div.contactMiddle a {
 }
 
 section.notices-section{
-    height: 95vh;
+    height: auto;
 }
 
 section.notices-section h2{
@@ -243,6 +244,7 @@ section.notices-section h2{
     position: relative;
     left: 17%;
     font-weight: 500;
+    margin-top: 5%;
 }
 
 section.notices-section h2::after{
@@ -261,7 +263,8 @@ section.notices-section div.cards-notices{
     display: flex;
     justify-content: space-around;
     width: 70vw;
-    margin: 0 auto;
+    margin: auto;
+    margin-bottom: 5%;
 }
 
 section.notices-section div.cards-notices div.card-notice{
