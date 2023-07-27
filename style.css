@@ -15,16 +15,12 @@ html,body{
     --color-font-bg: #fefefe;
     --font: 'Red Hat Display', sans-serif;
     --footer-color: #233d4b;
-}
-
-div#bHead{
-    background-color: var(--color-logo);
-    width: 100%;
-    height: 70px;
+    --border-color: #40698a;
 }
 
 div.header{
-    margin: 30px 15%;
+    margin: 0px 15%;
+    padding-top: 10px;
     display: flex;
     height: 80px;
     justify-content: space-between;
@@ -56,10 +52,15 @@ div.logo img{
     height: 50px;
 }
 
+div.items{
+    position: relative;
+    top: 20px;
+}
+
 div.items i{
     color: var(--color-logo);
     font-size: 1em;
-    margin: 0 5px;
+    margin: 0 10px;
     font-weight: 100;
     border: 1px solid var(--color-logo);
     border-radius: 50%;
@@ -80,19 +81,19 @@ div.home{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center right;
-    height: 100vh
+    height: 100vh;
 }
 
 div.homeText{
     width: 80%;
     position: relative;
-    left: 15%;
-    top: 10%;
+    left: 17%;
+    top: 20%;
 }
 
 div.homeText h1{
     color: var(--color-logo);
-    font-size: 5em;
+    font-size: 6em;
     margin-bottom: -.5em;
     font-weight: 900;
     line-height: .9em;
@@ -103,6 +104,7 @@ div.homeText p{
     font-size: 1.8em;
     color: var(--color-font-bg);
     font-weight: 500;
+    margin-top: 2em;
 }
 
 div.solutions{
@@ -113,12 +115,15 @@ div.solutions h2{
     font-size: 4em;
     text-align: center;
     color: var(--font-color-blue);
+    margin-bottom: 0px;
 }
 
 div.solutions p{
     text-align: center;
     font-size: 1.5em;
     font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 80px;
 }
 
 div.solutions div.solutions-cards{
@@ -131,43 +136,36 @@ div.solutions div.solutions-cards div{
     text-align: center;
     width: 25%;
     display: grid;
-    grid-template-rows: 21% 20% 60%;
+    grid-template-rows: 16% 18% 60%;
     height: 700px;
     margin: auto;
+    justify-content: space-between;
 }
 
 div.solutions div.solutions-cards div img{
-    width: 60%;
+    height: 140px;
     margin: 0 auto;
+    aspect-ratio: 2/1.5;
+    object-fit: contain;
 }
 
 div.solutions div.solutions-cards div h3{
     font-size: 2em;
     color: var(--font-color-blue);
     margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 div.solutions div.solutions-cards div p{
-    font-size: 1.1em;
+    font-size: 1.18em;
     font-weight: lighter;
     width: 100%;
 }
 
-div.solutions div.solutions-cards div:nth-child(2) img{
-    margin-top: 5%;
-}
+/* div.solutions div.solutions-cards div:nth-child(2) p{
+    width: 90%;
+} */
 
-div.solutions div.solutions-cards div:nth-child(3) img{
-    width: 63%;
-}
-
-div.solutions div.solutions-cards div:nth-child(1) img{
-    width: 55%;
-}
-
-div.contact {
-    display: flex;
-}
 
 section.middle{
     color: var(--color-font-bg);
@@ -201,38 +199,25 @@ section.middle div.mid p {
 }
 
 section.middle div.contactMiddle{
-    background-image: url(images/codepaper3.png);
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-}
-
-section.middle div.contactMiddle{
     background-image: linear-gradient(to right ,var(--font-color-blue) 60%, var(--color-logo));
     background-image: url(images/Site_V&S_02.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    height: 13vh;
     display: flex;
-    justify-content: space-around;
 }
 
 section.middle div.contactMiddle p , a{
-    font-size: 1.4em;
+    font-size: 1.8em;
     text-align: center;
     text-decoration: none;
     color: var(--color-font-bg);
     font-weight: 500;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
-section.middle div.contactMiddle div{
-    background-color: var(--font-color-blue);
-    height: 40px;
-    width: 300px;
+section.middle div.contactMiddle p{
+    margin-left: auto;
+    margin-right: 15px;
 }
 
 section.middle div.contactMiddle a {
@@ -241,6 +226,9 @@ section.middle div.contactMiddle a {
     width: 20rem;
     background-color: var(--font-color-blue);
     padding-top: 10px;
+    margin-right: auto;
+    margin-left: 15px;
+    transform: translateY(70%);
 }
 
 section.notices-section{
@@ -277,7 +265,8 @@ section.notices-section div.cards-notices{
 }
 
 section.notices-section div.cards-notices div.card-notice{
-    border-bottom: 2px solid var(--font-color-gray) ;
+   /*  border-bottom: 2px solid var(--font-color-gray) ; */
+    min-height: 615px;
     max-width: 400px;
     max-height: 700px;/* 
     display: grid;
@@ -311,7 +300,19 @@ section.notices-section div.cards-notices div.card-notice div a{
     font-weight: 500;
     font-size: 1em;
     position: relative;
+    margin-bottom: 10px;
     left: 67%;
+}
+
+section.notices-section div.cards-notices div.card-notice div a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--font-color-gray);
+    position: relative;
+    top: 20px;
+    left: -67%;
 }
 
 section.notices-section div.cards-notices div.card-notice div a i{
@@ -344,22 +345,23 @@ section.contact div.contact-items{
     height: 20vh;
     text-align: center;
     position: relative;
+    top: 80px;
 }
 
 section.contact div.contact-items i{
-    font-size: 1.3em;
+    font-size: 1.1em;
     position: relative;
     transform: translateY(-50%);
 }
 
 
 
-section.contact div.whats{
+div.whats{
     position: fixed;
     right: 8%;
     transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     background-color: #2ab33f;
     text-align: center;
@@ -367,20 +369,25 @@ section.contact div.whats{
     top: 90vh;
 }
 
-section.contact div.whats i{
-    font-size: 30px;
+div.whats i{
+    font-size: 50px;
     position: relative;
     top: 50%;
     transform: translateY(-50%);
     color: var(--color-font-bg);
+    width: 100%;
 }
 
 footer {
-    background-image: url(images/Site_V&S_03.png);
+    background-image: url(images/Site_V&S_05.jpg);
     background-size: contain;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    display: grid;
+    grid-template-rows: 60% 30%;
+    position: relative;
+    bottom: -1px;
 }
 
 div.all-footer {
@@ -388,8 +395,11 @@ div.all-footer {
     display: flex;
     margin: auto;
     justify-content: space-around;
+    flex-wrap: wrap;
     width: 70%;
     color: white;
+    margin-bottom: 0;
+    margin-top: 10%;
 }
 
 
@@ -423,7 +433,11 @@ div.adress-footer p {
 }
 
 div.all-footer div.items {
-    margin-top: 200px;
+    margin-top: 100px;
+}
+
+div.all-footer div.items i{
+    margin: 20px;
 }
 
 div.ass {
@@ -434,6 +448,145 @@ div.ass p {
     text-align: center;
     color: var(--color-logo);
     font-weight: 400;
+}
+
+footer div.contact{
+    display: grid;
+    grid-template-columns: 42% 58%;
+    width: 70%;
+    margin: auto;
+    border-bottom: 3px solid var(--color-logo);
+    height: 100%;
+    margin-top: 13%;
+}
+
+footer div.contact div{
+    margin: 0 5%;
+}
+
+footer div.contact > div{
+    height: 80%;
+}
+
+footer div.contact div.contactInfo div{
+    border-bottom: 2px solid var(--color-logo);
+}
+
+footer div.contact div.contactInfo div div.adress{
+    border-bottom: 0px;
+}
+
+/* footer div.contact div.forms{
+    grid-area: forms;
+}
+ */
+/* footer div.contact div.submitButtomDiv{
+    grid-area: submitButtomDiv;
+} */
+
+/* footer div.contact div.items{
+    grid-area: items;
+} */
+
+footer div.contact div.forms form{
+    display: grid;
+    grid-template-areas: "nome email"
+                         "telefone empresa"
+                         "menssagem menssagem";
+}
+
+footer div.contact div.forms form input, textarea{
+    background: rgba(63, 159, 204, 0.226);
+    border-radius: 10px;
+    border: 2px solid rgba(55, 107, 117, 0.315);
+    backdrop-filter: blur( 2px );
+    -webkit-backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    width: 90%;
+    height: 40px;
+    color: var(--color-font-bg);
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 1px 7px;
+    font-size: 1em;
+}
+
+footer div.contact div.forms form textarea{
+    grid-column: span 2;
+    width: 95%;
+    height: 200px;
+    resize: none;
+    margin-top: 10px;
+    padding: 1px 7px;
+    font-size: 1.2em;
+    font-family: var(--font);
+}
+textarea:focus, input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+footer div.contact div.contactInfo div.p p, div.telefone p{
+    color: var(--color-logo);
+    font-size: 2.1em;
+    font-weight: 800;
+    scale: 1;
+    margin: 4%;
+    margin-left: 7%;
+}
+
+footer div.contact div.contactInfo div div.adress{
+    margin: 5%;
+}
+
+
+footer div.contact div.contactInfo div.site p a{
+    margin-left: 10%;
+}
+
+footer div.contact div.contactInfo div div.adress p, div.site a{
+    color: var(--color-font-bg);
+    font-size: 1.5em;
+    font-weight: 400;
+    margin: 0;
+}
+
+footer div.contact div.contactInfo div.site p{
+    margin: 5%;
+}
+
+
+
+/* footer div.contact div.forms form{
+    grid-column: 2;
+    height: 35px;
+    justify-content: right;
+    display: flex;
+    position: relative;
+    transform: translateY(-200%);
+} */
+
+footer div.contact div.forms form button{
+    height: 40px;
+    grid-column: 2;
+    border-radius: 10px;
+    font-size: 1.1em;
+    background-color: var(--color-logo);
+    border: none;
+    color: #0a2241;
+}
+
+footer div.contact div.items{
+    grid-column: span 2;
+    margin: 0;
+}
+
+footer div.contact div.items div{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media (max-width: 1250px){ /* Cards-break */
@@ -449,7 +602,11 @@ div.ass p {
         width: 90vw;
         margin: 0 auto;
     }
-    
+
+    footer div.contact{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 850px){  /* Header-breaK */
@@ -457,13 +614,6 @@ div.ass p {
     div.homeText h1{
         font-size: 4em;
     }
-    div.solutions div.solutions-cards{
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-        width: 90%;
-        margin: auto;
-    }
-
     div.solutions div.solutions-cards{
         display: grid;
         grid-template-rows: 25% 15% 60%;
@@ -482,41 +632,93 @@ div.ass p {
     }
     
     section.middle div.contactMiddle{
-        background-image: url(images/Site_V&S_03.png);
-        height: 15vh;
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
+        height: 200px;
+    }
+
+    section.middle div.contactMiddle a {
+        font-size: 1.1em;
+        height: 2rem;
+        width: 20rem;
+        background-color: var(--font-color-blue);
+        margin: auto;
+        transform: translateY(-70%);
+    }
+
+    section.middle div.contactMiddle p{
+        margin: auto;
     }
 
     div.solutions div.solutions-cards div{
         width: 80%;
         display: grid;
-        grid-template-rows: 50% 15% 25%;
+        grid-template-rows: 22% 16% 70%;
         margin: auto;
-        height: 700px;
+        height: 500px;
     }
 
 
     section.notices-section div.cards-notices{
-/*         display: flex;
-        justify-content: space-around; */
         width: 80vw;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         margin: 0 auto;
     }
 
-    section.notices-section {
+    section.notices-section{
         height: 100%;
         width: 80vw;
-        margin: 0 auto;
-      }
-      
-    section.middle div.contactMiddle{
-        height: 10vh;
+        margin: 100px auto;
+    }
+
+    footer div.contact{
+        display: block;
+        height: 100%;
+        margin-top: 1%;
+    }
+
+    footer div.contact div.contactInfo{
+        height: 40%;
+    }
+
+    footer div.contact div.forms{
+        height: 40%;
+    }
+    
+    footer div.contact div.items{
+        height: 10%;
+    }
+
+    ooter div.contact div.contactInfo div.p p, div.telefone p{
+        color: var(--color-logo);
+        font-size: 2em;
+        font-weight: 800;
+        margin: 2%;
+        margin-left: 3%;
+    }
+    
+    footer div.contact div.contactInfo div div.adress{
+        margin: 3%;
     }
     
     
+    footer div.contact div.contactInfo div.site p a{
+        margin-left: 0;
+    }
+    
+    footer div.contact div.contactInfo div div.adress p, div.site a{
+        margin: 0;
+    }
+    
+    footer div.contact div.contactInfo div.site p{
+        margin: 3%;
+    }
+
+    footer div.contact{
+        margin-bottom: 30%;
+    }
 }
 
 @media (max-width: 770px){
@@ -538,8 +740,8 @@ div.ass p {
         bottom: 100px;
     }
 
-    section.contact div.whats{
-        position: absolute;
+    div.whats{
+        position: fixed;
         right: 8%;
         transform: translateY(-50%);
         width: 50px;
@@ -549,7 +751,7 @@ div.ass p {
         text-align: center;
     }
     
-    section.contact div.whats i{
+    div.whats i{
         font-size: 30px;
         position: relative;
         top: 50%;
@@ -561,20 +763,12 @@ div.ass p {
 
 @media (max-width: 500px){
     
-    section.middle div.contactMiddle p , a{
-        font-size: 1em;
-    }
-    
-    section.middle div.contactMiddle a {
-        font-size: .9em;
+    section.middle div.contactMiddle p{
+        font-size: 1.4em;
     }
 
     section.middle div.mid{
         font-size: .8em;
-    }
-
-    div#bHead{
-        height: 30px;
     }
 
     section.contact p.number{
@@ -607,4 +801,8 @@ div.ass p {
         margin: auto;
         height: 700px;
     }
+
+    div.all-footer div.items {
+        margin-top: 0px;
+      }
 }
