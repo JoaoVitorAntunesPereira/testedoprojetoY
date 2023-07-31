@@ -6,13 +6,13 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
 <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <title>V&S TECNOLOGIA</title>
 </head>
 <body>
-    <div class="home">
+    <div class="home" id="home">
         <div class="header">
             <div class="logo">
                 <img src="images/logo.png" alt="">
@@ -20,6 +20,23 @@
                 <p>TECNOLOGIA </p>
                 <p> INSPIRANDO A EVOLUÇÃO!</p>
             </div>
+            <nav class="navBar" onmouseenter="showMenu()" onmouseleave="hideMenu()">
+                <div id="navItems">
+                    <a href="#home">Home</a>
+                    <a href="#solutions">Soluções</a>
+                    <a href="#notices">Notícias</a>
+                    <a href="#footer">Contato</a>
+                </div>
+                <div id="mobileNav">
+                    <span onclick="showMenu()"><i class='bx bx-menu'></i><span>Menu</span></span>
+                    <ul class="navItemsList" id="mobileNavItemsListID">
+                        <li><a href="#home" onclick="hideMenu()">Home</a></li>
+                        <li><a href="#solutions" onclick="hideMenu()">Soluções</a></li>
+                        <li><a href="#notices" onclick="hideMenu()">Notícias</a></li>
+                        <li><a href="#footer" onclick="hideMenu()">Contato</a></li>
+                    </ul>
+                </div>
+            </nav>
             <div class="items">
                 <a href="https://wa.me/5504934428218"><i class='bx bxl-whatsapp' ></i></a>
                 <a href=""><i class='bx bxl-instagram' ></i></a>
@@ -30,7 +47,7 @@
             <p>Potencialize seu negócio com soluções <br> tecnológicas personalizadas</p>
         </div>
     </div>
-    <div class="solutions">
+    <div class="solutions" id="solutions">
         <h2>Soluções completas</h2>
         <p>Oferecemos serviços em tecnologia que vão facilitar e impulsionar o seu negócio.</p>
         <div class="solutions-cards">
@@ -60,10 +77,10 @@
         </div>
         <div class="contactMiddle">
             <p>Entre em contato com nossa equipe de especialistas</p>
-            <a href="">SOLICITAR CONTATO</a>
+            <a href="#footer">SOLICITAR CONTATO</a>
         </div>
     </section>
-    <section class="notices-section">
+    <section class="notices-section" id="notices">
         <h2>Últimas notícias</h2>
         <div class="cards-notices">
             <div class="card-notice">
@@ -113,7 +130,7 @@
             <i class='bx bxl-whatsapp' ></i>
         </div>
     </section> -->
-    <footer>
+    <footer id="footer">
         <div class="contact">
             <div class="contactInfo">
                 <div class="p">
@@ -140,7 +157,8 @@
                     <input type="email" name="email" placeholder="E-mail">
                     <input type="tel" name="telefone" placeholder="Telefone">
                     <input type="text" name="empresa" id="empresa" placeholder="Empresa">
-                    <textarea name="menssagem" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+                    <textarea name="mensagem" id="" cols="30" rows="10" placeholder="Sua mensagem"></textarea>
+                    <!-- <input type="text" name="menssagem" placeholder="Sua mensagem"> -->
                     <button type="submit">SOLICITAR CONTATO</button>
                 </form>
             </div>
@@ -178,5 +196,6 @@
     <div class="whats">
         <a href="https://wa.me/5504934428218"><i class='bx bxl-whatsapp'></i></a>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

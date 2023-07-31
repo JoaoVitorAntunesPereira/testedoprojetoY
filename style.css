@@ -19,7 +19,7 @@ html,body{
 }
 
 div.header{
-    margin: 0px 15%;
+    margin: 0px 10%;
     padding-top: 10px;
     display: flex;
     height: 80px;
@@ -52,15 +52,15 @@ div.logo img{
     height: 50px;
 }
 
-div.items{
+div.header div.items{
     position: relative;
-    top: 20px;
+    width: 25%;
 }
 
 div.items i{
     color: var(--color-logo);
     font-size: 1em;
-    margin: 0 10px;
+    margin: 0 5%;
     font-weight: 100;
     border: 1px solid var(--color-logo);
     border-radius: 50%;
@@ -73,6 +73,63 @@ div.items i:nth-child(2){
 
 div.items a:hover i{
     transform: scale(1.15);
+}
+
+nav.navBar{
+    margin: auto;
+    color: var(--color-font-bg);
+    font-size: 1.3em;
+    margin-right: 0;
+}
+
+nav.navBar ul#mobileNavItemsListID{
+    display: none;
+    position: absolute;
+    top: 40px;
+    list-style: none;
+    background-color: var(--font-color-blue-2);
+    padding: 10px;
+}
+
+nav.navBar ul li{
+    font-size: 1em;
+}
+
+nav.navBar ul li a{
+    font-size: 1em;
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    margin: 2px 0;
+}
+
+nav.navBar span{
+    display: flex;
+}
+
+nav.navBar span i.bx-menu{
+    margin: auto;
+    font-size: 1.4em;
+}
+
+nav.navBar span span{
+    margin: auto;
+}
+
+div#mobileNav{
+    display: none;
+}
+
+div#navItems{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+div#navItems a{
+    font-size: 1em;
+    margin: 5px;
 }
 
 div.home{
@@ -437,10 +494,11 @@ div.adress-footer p {
 
 div.all-footer div.items {
     margin-top: 100px;
+    height: 50px;
 }
 
-div.all-footer div.items i{
-    margin: 20px;
+div.all-footer div.items div a{
+    margin: 30px;
 }
 
 div.ass {
@@ -522,7 +580,7 @@ footer div.contact div.forms form textarea{
     resize: none;
     margin-top: 10px;
     padding: 1px 7px;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: var(--font);
 }
 textarea:focus, input:focus {
@@ -591,6 +649,13 @@ footer div.contact div.items div{
     margin: 0;
     left: 50%;
     transform: translateX(-50%);
+    width: 10%;
+    min-width: 200px;
+}
+
+div.items{
+    min-width: 100px;
+    margin: 20px;
 }
 
 @media (max-width: 1250px){ /* Cards-break */
@@ -610,7 +675,16 @@ footer div.contact div.items div{
     footer div.contact{
         width: 100%;
     }
+    
+    div.logo p:nth-child(4){
+        display: none;
+    }
+}
 
+@media (max-width: 1050px){
+    div.logo p:nth-child(3){
+        display: none;
+    }
 }
 
 @media (max-width: 850px){  /* Header-breaK */
@@ -722,6 +796,24 @@ footer div.contact div.items div{
     footer div.contact{
         margin-bottom: 30%;
     }
+
+    div.solutions div.solutions-cards div{
+        display: grid;
+        grid-template-rows: 25% 15% 55%;
+        margin: auto;
+    }
+
+    div#navItems{
+        display: none;
+    }
+
+    div#mobileNav{
+        display: block;
+    }
+
+    ul.navItemsList{
+        display: none;
+    }
 }
 
 @media (max-width: 770px){
@@ -740,7 +832,6 @@ footer div.contact div.items div{
 
     div.all-footer div.items{
         position: relative;
-        bottom: 100px;
     }
 
     div.whats{
@@ -760,6 +851,28 @@ footer div.contact div.items div{
         top: 50%;
         transform: translateY(-50%);
         color: var(--color-font-bg);
+    }
+
+    footer div.contact div.forms form{
+        display: grid;
+    }
+
+    footer div.contact div.forms form input, textarea{
+    grid-column: span 2;
+    width: 80%;
+    height: 40px;
+    margin: 0 9%;
+    margin-bottom: 20px;
+    }
+
+    footer div.contact div.forms form textarea{
+    width: 80%;
+    height: 100px;
+    margin-bottom: 20px;
+    }
+
+    footer div.contact div.forms button{
+        margin-right: 15%;
     }
 }
 
@@ -809,7 +922,12 @@ footer div.contact div.items div{
     }
 
 
-    div.all-footer div.items {
+/*     div.all-footer div.items {
         margin-top: 0px;
-      }
+    } */
+
+    div.header{
+        margin: 0px 5%;
+    }
+    
 }
