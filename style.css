@@ -55,6 +55,7 @@ div.logo img{
 div.header div.items{
     position: relative;
     width: 25%;
+    margin-top: 14px;
 }
 
 div.items i{
@@ -117,6 +118,7 @@ nav.navBar span span{
 }
 
 div#mobileNav{
+    margin-top: -15px;
     display: none;
 }
 
@@ -137,7 +139,7 @@ div.home{
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: center center;
     height: 100vh;
 }
 
@@ -663,13 +665,14 @@ div.items{
         display: flex;
         width: 90%;
         margin: auto;
+        margin-bottom: 7%;
     }
 
     section.notices-section div.cards-notices{
         display: flex;
         justify-content: space-around;
         width: 90vw;
-        margin: 0 auto;
+        margin: auto;
     }
 
     footer div.contact{
@@ -832,6 +835,7 @@ div.items{
 
     div.all-footer div.items{
         position: relative;
+        margin-top: 20px;
     }
 
     div.whats{
