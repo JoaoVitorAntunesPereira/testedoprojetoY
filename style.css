@@ -52,13 +52,77 @@ div.logo img{
     height: 50px;
 }
 
-div.header div.items{
-    position: relative;
-    width: 25%;
-    margin-top: 14px;
+div.headerItems{
+    width: 60%;
 }
 
-div.items i{
+div.iconsItems{
+    display: flex;
+    flex-direction: column;
+    width: 55px;
+}
+
+div.header div.items{
+    position: relative;
+    width: auto;
+    margin-top: 14px;
+    display: flex;
+    justify-content: end;
+}
+
+
+div.iconsItems p{
+    color: var(--color-font-bg);
+    font-size: 1.2em;
+    margin: 1%;/* 
+    position: relative;
+    text-align: center;
+    top: -5px;
+    left: -20%;
+    opacity: 0; */
+    text-align: center;
+    opacity: 0;
+}
+
+div.iconsItems:hover p{
+    animation: textIconShow .8s forwards;
+}
+
+div.iconsItems:nth-child(2) p{
+    margin-left: -10px;
+}
+
+div.iconsItems:nth-child(3) p{
+    margin-left: -5px;
+}
+
+div.iconsItems:nth-child(4) p{
+    margin-left: -5px;
+}
+
+.fixedItems div.iconsItems:nth-child(1) p{
+    margin-left: -10px;
+}
+
+div.iconsItems:nth-child(6) p{
+    margin-left: -9px;
+}
+
+@keyframes textIconShow{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+div.header div.items div.fixedItems{
+    display: flex;
+}
+
+div.items i, div.iconsItems i{
     color: var(--color-logo);
     font-size: 1em;
     margin: 0 5%;
@@ -76,14 +140,7 @@ div.items a:hover i{
     transform: scale(1.15);
 }
 
-nav.navBar{
-    margin: auto;
-    color: var(--color-font-bg);
-    font-size: 1.3em;
-    margin-right: 0;
-}
-
-nav.navBar ul#mobileNavItemsListID{
+div.navBar ul#mobileNavItemsListID{
     display: none;
     position: absolute;
     top: 40px;
@@ -92,32 +149,33 @@ nav.navBar ul#mobileNavItemsListID{
     padding: 10px;
 }
 
-nav.navBar ul li{
+div.mobileNav ul li{
     font-size: 1em;
 }
 
-nav.navBar ul li a{
+div.mobileNavul li a{
     font-size: 1em;
     width: 100%;
     display: inline-block;
     text-align: left;
     margin: 2px 0;
+    font-weight: 200;
 }
 
-nav.navBar span{
+div.mobileNav span{
     display: flex;
 }
 
-nav.navBar span i.bx-menu{
+div.mobileNav span i.bx-menu{
     margin: auto;
     font-size: 1.4em;
 }
 
-nav.navBar span span{
+div.mobileNav span span{
     margin: auto;
 }
 
-div#mobileNav{
+div#mobileHeader{
     margin-top: -15px;
     display: none;
 }
@@ -132,6 +190,25 @@ div#navItems{
 div#navItems a{
     font-size: 1em;
     margin: 5px;
+    font-weight: 200;
+}
+
+div#mobileNav div.iconsItems{
+    position: relative;
+    width: 15%;
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.mobileIconsItems{
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+}
+
+div.mobileIconsItems a{
+    width: 50px;
 }
 
 div.home{
@@ -197,10 +274,11 @@ div.solutions div.solutions-cards div{
     text-align: center;
     width: 25%;
     display: grid;
-    grid-template-rows: 16% 18% 60%;
+    grid-template-rows: 25% 20% 60%;
     margin: auto;
     justify-content: space-between;
 }
+
 
 div.solutions div.solutions-cards div img{
     height: 140px;
@@ -324,6 +402,7 @@ section.notices-section div.cards-notices{
     width: 70vw;
     margin: auto;
     margin-bottom: 5%;
+    animation: andar 3s normal;
 }
 
 section.notices-section div.cards-notices div.card-notice{
@@ -399,10 +478,6 @@ section.contact p.adress{
     text-align: center;
 }
 
-section.contact iframe.adress-map{
-    width: 99vw;
-}
-
 section.contact div.contact-items{
     height: 20vh;
     text-align: center;
@@ -461,7 +536,6 @@ div.all-footer {
     width: 70%;
     color: white;
     margin-bottom: 0;
-    margin-top: 10%;
 }
 
 
@@ -477,16 +551,20 @@ div.footer {
     width: 300px;
 }
 
-
 div.text-footer p:nth-child(1){
     font-weight: bold;
     font-size: 1.5em;
 }
 
+
 div.text-footer p:nth-child(2){
-    margin: -2.4em 0 2.4em 10em;
+    margin: -2.4em 0 2.4em 5.5em;
     font-size: .7em;
     /* padding: 0 0 0 5em; */
+}
+
+span#fraseEmpresa{
+    font-weight: 100;
 }
 
 div.adress-footer p {
@@ -504,12 +582,12 @@ div.all-footer div.items div a{
 }
 
 div.ass {
-    background-color: var(--footer-color);
+    background-color: var(--color-logo);
     padding: 1em;
 }
 div.ass p {
     text-align: center;
-    color: var(--color-logo);
+    color: var(--footer-color);
     font-weight: 400;
 }
 
@@ -518,8 +596,7 @@ footer div.contact{
     grid-template-columns: 42% 58%;
     width: 70%;
     margin: auto;
-    border-bottom: 3px solid var(--color-logo);
-    height: 100%;
+    border-bottom: 1px solid var(--color-logo);
     margin-top: 13%;
 }
 
@@ -532,7 +609,7 @@ footer div.contact > div{
 }
 
 footer div.contact div.contactInfo div{
-    border-bottom: 2px solid var(--color-logo);
+    border-bottom: 1px solid var(--color-logo);
 }
 
 footer div.contact div.contactInfo div div.adress{
@@ -599,13 +676,23 @@ footer div.contact div.contactInfo div.p p, div.telefone p{
     margin-left: 7%;
 }
 
+footer div.contact div.contactInfo div.telefone p a{
+    color: var(--color-logo);
+    font-size: 1.2em;
+    margin-left: 7%;
+}
+
+footer div.contact div.contactInfo div.telefone p a i{
+    transform: translateY(10%);
+}
+
 footer div.contact div.contactInfo div div.adress{
-    margin: 5%;
+    margin: 5% 0% 5% 7%;
 }
 
 
 footer div.contact div.contactInfo div.site p a{
-    margin-left: 10%;
+    margin-left: 2%;
 }
 
 footer div.contact div.contactInfo div div.adress p, div.site a{
@@ -638,6 +725,8 @@ footer div.contact div.forms form button{
     background-color: var(--color-logo);
     border: none;
     color: #0a2241;
+    margin-bottom: 10%;
+    transform: translateX(-8px);
 }
 
 footer div.contact div.items{
@@ -806,11 +895,11 @@ div.items{
         margin: auto;
     }
 
-    div#navItems{
+    div.headerItems{
         display: none;
     }
 
-    div#mobileNav{
+    div#mobileHeader{
         display: block;
     }
 
@@ -865,7 +954,7 @@ div.items{
     grid-column: span 2;
     width: 80%;
     height: 40px;
-    margin: 0 9%;
+    margin: 0 7%;
     margin-bottom: 20px;
     }
 
@@ -876,7 +965,8 @@ div.items{
     }
 
     footer div.contact div.forms button{
-        margin-right: 15%;
+        margin-left: -18%;
+        width: 100%;
     }
 }
 
@@ -924,11 +1014,6 @@ div.items{
     div.solutions div.solutions-cards div p{
         margin-bottom: 0;
     }
-
-
-/*     div.all-footer div.items {
-        margin-top: 0px;
-    } */
 
     div.header{
         margin: 0px 5%;

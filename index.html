@@ -20,13 +20,7 @@
                 <p>TECNOLOGIA </p>
                 <p> INSPIRANDO A EVOLUÇÃO!</p>
             </div>
-            <nav class="navBar" onmouseenter="showMenu()" onmouseleave="hideMenu()">
-                <div id="navItems">
-                    <a href="#home">Home</a>
-                    <a href="#solutions">Soluções</a>
-                    <a href="#notices">Notícias</a>
-                    <a href="#footer">Contato</a>
-                </div>
+            <div id="mobileHeader">
                 <div id="mobileNav">
                     <span onclick="showMenu()"><i class='bx bx-menu'></i><span>Menu</span></span>
                     <ul class="navItemsList" id="mobileNavItemsListID">
@@ -36,10 +30,40 @@
                         <li><a href="#footer" onclick="hideMenu()">Contato</a></li>
                     </ul>
                 </div>
-            </nav>
-            <div class="items">
-                <a href="https://wa.me/5504934428218"><i class='bx bxl-whatsapp' ></i></a>
-                <a href=""><i class='bx bxl-instagram' ></i></a>
+                <div class="iconsItems mobileIconsItems">
+                    <a href="https://wa.me/5504934428218" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
+                    <a href="" target="_blank"><i class='bx bxl-instagram' ></i></a>
+                </div>
+            </div>
+            <div class="headerItems">
+                <div class="items">
+                    <div class="iconsItems" id="homeIcon">
+                        <a href="#home"><i class='bx bx-home-alt-2'></i></a>
+                        <p>Home</p>
+                    </div>
+                    <div class="iconsItems" id="solutionIcon">
+                        <a href="#solutions"><i class='bx bx-cog'></i></a>
+                        <p>Soluções</p>
+                    </div>
+                    <div class="iconsItems" id="noticesIcon">
+                        <a href="#notices"><i class='bx bx-bell' ></i></a>
+                        <p>Notícias</p>
+                    </div>
+                    <div class="iconsItems" id="contactIcon">
+                        <a href="#footer"><i class='bx bx-envelope' ></i></a>
+                        <p>Contato</p>
+                    </div>
+                    <div class="fixedItems">
+                        <div class="iconsItems" id="whatssapIcon">
+                            <a href="https://wa.me/5504934428218"><i class='bx bxl-whatsapp' ></i></a>
+                            <p>Whatssap</p>
+                        </div>
+                        <div class="iconsItems" id="instagramIcon">
+                            <a href=""><i class='bx bxl-instagram' ></i></a>
+                            <p>Instagram</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="homeText">
@@ -143,11 +167,11 @@
                     </div>
                 </div>
                 <div class="telefone">
-                    <p>+55 49 3442-8218</p>
+                    <p>+55 49 3442-8218<a href="https://wa.me/5504934428218" target="_blank"><i class='bx bxl-whatsapp' ></i></a></p>
                 </div>
                 <div class="site">
                     <p>
-                        <a href="https://ves.tec.br">ves.tec.br</a>
+                        <a href="https://ves.tec.br">contato@vstecnologia.com.br</a>
                     </p>
                 </div>
             </div>
@@ -162,19 +186,13 @@
                     <button type="submit">SOLICITAR CONTATO</button>
                 </form>
             </div>
-            <div class="items">
-                <div>
-                    <a href="https://wa.me/5504934428218" target="_blank"><i class='bx bxl-whatsapp' ></i></a>
-                    <a href="" target="_blank"><i class='bx bxl-instagram' ></i></a>
-                </div>
-            </div>
         </div>
         <div class="all-footer">
             <div class="footer">
                 <div class="logo-footer">
                     <img src="images/logo.png" alt="">
                     <div class="text-footer">
-                        <p>V&S TECNOLOGIA</p>
+                        <p>V&S<span id="fraseEmpresa">TECNOLOGIA</span></p>
                         <p>INSPIRANDO A EVOLUÇÃO!</p>
                     </div>
                 </div>
@@ -196,6 +214,16 @@
     <div class="whats">
         <a href="https://wa.me/5504934428218"><i class='bx bxl-whatsapp'></i></a>
     </div>
+    <div class="cookies">
+        <form id="cookie-form" method="post" action="/configurar-cookies">
+            <label>
+              Aceitar cookies obrigatórios?
+              <input type="radio" name="aceitarCookies" value="true"> Sim
+              <input type="radio" name="aceitarCookies" value="false"> Não
+            </label>
+            <button type="submit">Salvar preferência</button>
+        </form>
+    </body>div>
     <script src="script.js"></script>
 </body>
 </html>
