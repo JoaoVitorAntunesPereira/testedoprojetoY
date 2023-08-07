@@ -12,17 +12,17 @@
     <title>V&S TECNOLOGIA</title>
 </head>
 <body>
-    <div class="home" id="home">
+    <header>
         <div class="header">
             <div class="logo">
-                <img src="images/logo.png" alt="">
+                <img src="images/logobranca.png" alt="">
                 <p><strong>V&S</strong></p>
                 <p>TECNOLOGIA </p>
                 <p> INSPIRANDO A EVOLUÇÃO!</p>
             </div>
             <div id="mobileHeader">
                 <div id="mobileNav">
-                    <span onclick="showMenu()"><i class='bx bx-menu'></i><span>Menu</span></span>
+                    <span onclick="showMenu()" id="spanNav"><i class='bx bx-menu'></i><span>Menu</span></span>
                     <ul class="navItemsList" id="mobileNavItemsListID">
                         <li><a href="#home" onclick="hideMenu()">Home</a></li>
                         <li><a href="#solutions" onclick="hideMenu()">Soluções</a></li>
@@ -66,6 +66,8 @@
                 </div>
             </div>
         </div>
+    </header>
+    <div class="home" id="home">
         <div class="homeText">
             <h1>Conecte <br> sua empresa <br> ao futuro</h1>
             <p>Potencialize seu negócio com soluções <br> tecnológicas personalizadas</p>
@@ -212,18 +214,82 @@
         <p>V&S Tecnologia site by João and Rauber</p>
     </div>
     <div class="whats">
-        <a href="https://wa.me/5504934428218"><i class='bx bxl-whatsapp'></i></a>
+        <div class="iconsItems" id="homeIcon">
+            <a href="#home"><i class='bx bx-home-alt-2'></i></a>
+        </div>
+        <div class="iconsItems" id="whatssapIcon">
+            <a href="https://wa.me/5504934428218"><i class='bx bxl-whatsapp' ></i></a>
+        </div>
     </div>
-    <div class="cookies">
+<!--     <div class="cookies">
         <form id="cookie-form" method="post" action="/configurar-cookies">
-            <label>
-              Aceitar cookies obrigatórios?
-              <input type="radio" name="aceitarCookies" value="true"> Sim
-              <input type="radio" name="aceitarCookies" value="false"> Não
-            </label>
-            <button type="submit">Salvar preferência</button>
+            <p>Utilizamos de cookies para melhorar sua experiência em nossosite para compreender a sua interação com o nosso serviço. Aoclicar em Aceitar, você concorda com o uso de tais tecnologiaspara marketing e análise</p>
+            <button value="true" name="aceitarCookies">
+              <p>Aceitar</p>
+            </button>
+            <button value="false" name="aceitarCookies">
+              <p>Recusar</p>
+            </button>
         </form>
-    </body>div>
+    </div> -->
+
+    <div class="confirmEmail">
+        <div id="email-sucesso" style="display: none;">
+            <h1> enviado com <strong>sucesso</strong> </h1>
+            <button onclick="SairDiv()"> Fechar </button>
+        </div>
+        <div id="email-erro" style="display: none;">
+            <h1> <strong>erro</strong> ao enviar o email </h1>
+            <p> Entre em contato com o suporte </p>
+            <button onclick="SairDiv()"> Fechar </button>
+        </div>
+    </div>
     <script src="script.js"></script>
+    <script>
+        // Função para ocultar o formulário
+        function ocultarFormulario() {
+          const cookieForm = document.getElementById('cookie-form');
+          cookieForm.classList.add('hidden');
+        }
+
+        // Verificar se o cookie foi aceito e ocultar o formulário, se necessário
+        const aceitaCookies = '{%ACEITA_COOKIES%}'; // Substituir pelo valor real do cookie (Sim ou Não)
+        if (aceitaCookies === 'Sim') {
+          ocultarFormulario();
+          setTimeout(() => {
+            document.getElementById('cookie-form').classList.remove('hidden');
+            }, 10000);
+        }
+
+        function enviarFormulario() {
+        const formulario = document.getElementById('meu-form');
+        const formData = new FormData(formulario);
+
+        console.log(formData);
+        fetch('/cadastro', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Os dados enviados pelo servidor estão em 'data'
+            console.log('Resposta do servidor:', data);
+
+            // Verifique o status da resposta
+            if (data.status === 'success') {
+                var sucesso = document.getElementById('email-sucesso')
+                sucesso.style.display = 'block';
+            // Faça o que for necessário com os dados de sucesso
+            } else {
+                var erro = document.getElementById('email-erro')
+                erro.style.display = 'block';
+            // Trate o erro, se necessário
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao enviar a solicitação:', error);
+        });
+        }
+    </script>
 </body>
 </html>
