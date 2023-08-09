@@ -27,6 +27,7 @@ div.header{
     display: flex;
     height: 60px;
     justify-content: space-between;
+    z-index: 1;
 }
 
 
@@ -221,7 +222,6 @@ div.home{
     background-repeat: no-repeat;
     background-position: center center;
     height: 100vh;
-    margin-top: -64px;
 }
 
 div.homeText{
@@ -234,6 +234,7 @@ div.homeText{
 div.homeText h1{
     color: var(--color-logo);
     font-size: 6em;
+    margin: 0;
     margin-bottom: -.5em;
     font-weight: 900;
     line-height: .9em;
@@ -249,14 +250,15 @@ div.homeText p{
 
 div.solutions{
     color: var(--font-color-gray);
+    margin-top: 5%;
 }
 
 div.solutions h2{
     font-size: 4em;
     text-align: center;
     color: var(--font-color-blue);
-    margin-top: 5%;
     margin-bottom: 0;
+    margin-top: 0;
 }
 
 div.solutions p{
@@ -269,7 +271,7 @@ div.solutions p{
 
 div.solutions div.solutions-cards{
     display: flex;
-    width: 70%;
+    width: 75%;
     margin: auto;
     margin-bottom: 7%;
 }
@@ -516,19 +518,22 @@ div.whats i{
     width: 100%;
 }
 
-footer {
+section.footer{
     background-image: url(images/Site_V&S_05.jpg);
     background-size: contain;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+footer {
     display: grid;
     grid-template-rows: 60% 30%;
     position: relative;
     bottom: -1px;
 }
 
-div.all-footer {
+div.all-footer, div.all-footer-mobile{
     padding: 1.3em 0 1em 0;
     display: flex;
     margin: auto;
@@ -540,7 +545,7 @@ div.all-footer {
 }
 
 
-div.logo-footer img {
+div.logo-footer img, div.all-footer-mobile img {
     transform: translate(-85%, 97%);
     position: relative;
     width: 85px;
@@ -549,7 +554,6 @@ div.logo-footer img {
 
 
 div.footer {
-    width: 300px;
 }
 
 div.text-footer p:nth-child(1){
@@ -573,12 +577,13 @@ div.adress-footer p {
     margin: .2em;
 }
 
-div.all-footer div.items {
+
+div.all-footer div.items , div.all-footer-mobile div.items{
     margin-top: 100px;
     height: 50px;
 }
 
-div.all-footer div.items div a{
+div.all-footer div.items div a, div.all-footer-mobile div.items div a{
     margin: 30px;
 }
 
@@ -599,6 +604,7 @@ footer div.contact{
     margin: auto;
     border-bottom: 1px solid var(--color-logo);
     margin-top: 13%;
+    
 }
 
 footer div.contact div{
@@ -781,6 +787,12 @@ div.cookies form button{
     justify-content: space-between;
 }
 
+
+
+div.all-footer-mobile{
+    display: none;
+}
+
 @media (max-width: 1250px){ /* Cards-break */
     div.solutions div.solutions-cards{
         display: flex;
@@ -875,17 +887,20 @@ div.cookies form button{
     }
 
     footer div.contact{
-        display: block;
-        height: 110vh;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
         margin-top: 1%;
     }
 
     footer div.contact div.contactInfo{
+        width: 100%;
         height: 50%;
+        margin-bottom: 20px;
     }
 
     footer div.contact div.forms{
-        height: 50%;
+        width: 100%;
     }
     
     footer div.contact div.items{
@@ -894,10 +909,10 @@ div.cookies form button{
 
     ooter div.contact div.contactInfo div.p p, div.telefone p{
         color: var(--color-logo);
-        font-size: 2em;
+        font-size: 1.5em;
         font-weight: 800;
         margin: 2%;
-        margin-left: 3%;
+        margin-left: 2%;
     }
     
     footer div.contact div.contactInfo div div.adress{
@@ -910,16 +925,13 @@ div.cookies form button{
     }
     
     footer div.contact div.contactInfo div div.adress p, div.site a{
+        font-size: 110%;
         margin: 0;
     }
     
     footer div.contact div.contactInfo div.site p{
         margin: 3%;
     }
-
-/*     footer div.contact{
-        margin-bottom: 30%;
-    } */
 
     div.solutions div.solutions-cards div{
         display: grid;
@@ -938,6 +950,10 @@ div.cookies form button{
     ul.navItemsList{
         display: none;
     }
+
+    div.all-footer{
+        display: none;
+    }
 }
 
 @media (max-width: 770px){
@@ -946,36 +962,40 @@ div.cookies form button{
         display: none;
     }
 
-    div.all-footer{
-        width: 80vw;
+    div.all-footer-mobile{
+        height: 250px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    div.all-footer div.logo-footer img{
+    div.all-footer-mobile div.logo-footer img{
         display: none;
     }
 
-    div.all-footer div.items{
+    div.all-footer-mobile div.items{
         position: relative;
-        margin-top: 20px;
+        margin-top: 50px;
     }
 
     div.whats{
         position: fixed;
-        right: 8%;
-        transform: translateY(-50%);
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background-color: #2ab33f;
+        right: 2%;
+        top: 85%;
+    }
+
+    div.whats div{
+        width: 40px;
         text-align: center;
     }
     
     div.whats i{
-        font-size: 30px;
+        font-size: 40px;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
-        color: var(--color-font-bg);
+        color: var(--font-color-blue-2);
     }
 
     footer div.contact div.forms form{
@@ -1045,10 +1065,6 @@ div.cookies form button{
     }
     div.solutions div.solutions-cards div p{
         margin-bottom: 0;
-    }
-
-    div.header{
-        margin: 0px 5%;
     }
     
 }
