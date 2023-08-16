@@ -369,7 +369,7 @@ section.middle div.contactMiddle{
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
-    min-height: 200px;
+    min-height: 100px;
 }
 
 section.middle div.contactMiddle p , div.contactMiddle a{
