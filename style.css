@@ -324,7 +324,6 @@ div.solutions div.solutions-cards div p{
     font-size: 1.18em;
     font-weight: lighter;
     width: 100%;
-    margin-bottom: 0;
 }
 
 section.middle{
@@ -337,6 +336,7 @@ section.middle div.mid {
     background-size: cover;
     background-position: center center;
     height: 90vh;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,6 +369,7 @@ section.middle div.contactMiddle{
     background-repeat: no-repeat;
     background-position: center center;
     display: flex;
+    min-height: 200px;
 }
 
 section.middle div.contactMiddle p , div.contactMiddle a{
@@ -569,6 +570,7 @@ footer {
     grid-template-rows: 60% 30%;
     position: relative;
     bottom: -1px;
+    min-height: 100vh;
 }
 
 div.all-footer, div.all-footer-mobile{
@@ -580,12 +582,7 @@ div.all-footer, div.all-footer-mobile{
     width: 70%;
     color: white;
     margin-bottom: 0;
-}
-
-
-div.all-footer{
-    margin-bottom: 2%;
-    margin-top: 1%;
+    min-height: 290px;
 }
 
 div.all-footer div.footer div.logo-footer{
@@ -654,8 +651,6 @@ footer div.contact{
     width: 70%;
     margin: auto;
     border-bottom: 1px solid var(--color-logo);
-    margin-top: 13%;
-    
 }
 
 footer div.contact > div{
